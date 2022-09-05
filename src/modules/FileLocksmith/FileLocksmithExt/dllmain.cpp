@@ -17,3 +17,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     return TRUE;
 }
 
+extern "C" __declspec(dllexport) void* __cdecl powertoy_create()
+{
+    return NULL;
+}
