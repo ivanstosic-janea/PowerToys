@@ -65,6 +65,11 @@
                 "modules\\FileExplorerPreview\\PowerToys.SvgThumbnailProvider.dll",
                 "modules\\FileExplorerPreview\\PowerToys.SvgThumbnailProvider.comhost.dll",
 
+                "modules\\FileLocksmith\\PowerToys.FileLocksmith.exe",
+                "modules\\FileLocksmith\\PowerToys.FileLocksmith.dll",
+                "modules\\FileLocksmith\\PowerToys.FileLocksmithExt.dll",
+                "modules\\FileLocksmith\\PowerToys.FileLocksmithContextMenu.dll",
+
                 "modules\\ImageResizer\\PowerToys.ImageResizer.exe",
                 "modules\\ImageResizer\\PowerToys.ImageResizer.dll",
                 "modules\\ImageResizer\\PowerToys.ImageResizerExt.dll",
