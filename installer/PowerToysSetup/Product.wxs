@@ -15,6 +15,7 @@
   <?define MouseUtilsProjectName="MouseUtils"?>
   <?define AlwaysOnTopProjectName="AlwaysOnTop"?>
   <?define MeasureToolProjectName="MeasureTool"?>
+  <?define FileLocksmithProjectName="FileLocksmith"?>
 
   <?define RepoDir="$(var.ProjectDir)..\..\" ?>
   <?if $(var.Platform) = x64?>
@@ -51,11 +52,11 @@
 
   <?define SettingsV2Files=Ijwhost.dll;ColorCode.Core.dll;ColorCode.WinUI.dll;CommunityToolkit.Common.dll;CommunityToolkit.WinUI.dll;CommunityToolkit.WinUI.UI.Controls.Core.dll;CommunityToolkit.WinUI.UI.Controls.DataGrid.dll;CommunityToolkit.WinUI.UI.Controls.Input.dll;CommunityToolkit.WinUI.UI.Controls.Layout.dll;CommunityToolkit.WinUI.UI.Controls.Markdown.dll;CommunityToolkit.WinUI.UI.Controls.Media.dll;CommunityToolkit.WinUI.UI.Controls.Primitives.dll;CommunityToolkit.WinUI.UI.dll;icon.ico;Microsoft.Graphics.Canvas.Interop.dll;Microsoft.InteractiveExperiences.Projection.dll;Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll;Microsoft.Windows.ApplicationModel.Resources.Projection.dll;Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll;Microsoft.Windows.AppLifecycle.Projection.dll;Microsoft.Windows.SDK.NET.dll;Microsoft.Windows.System.Power.Projection.dll;Microsoft.WindowsAppRuntime.Bootstrap.Net.dll;Microsoft.WinUI.dll;Microsoft.Xaml.Interactions.dll;Microsoft.Xaml.Interactivity.dll;PowerToys.Interop.dll;PowerToys.ManagedCommon.dll;System.Management.dll;PowerToys.ManagedTelemetry.dll;PowerToys.Settings.deps.json;PowerToys.Settings.dll;PowerToys.Settings.exe;PowerToys.Settings.runtimeconfig.json;PowerToys.Settings.UI.Lib.dll;resources.pri;System.IO.Abstractions.dll;System.Text.Json.dll;WinRT.Runtime.dll;Microsoft.Graphics.Canvas.dll;Microsoft.WindowsAppRuntime.Bootstrap.dll;CoreMessagingXP.dll;dcompi.dll;dwmcorei.dll;DwmSceneI.dll;DWriteCore.dll;marshal.dll;Microsoft.DirectManipulation.dll;Microsoft.InputStateManager.dll;Microsoft.Internal.FrameworkUdk.dll;Microsoft.UI.Composition.OSSupport.dll;Microsoft.UI.Input.dll;Microsoft.UI.Windowing.Core.dll;Microsoft.UI.Xaml.Controls.dll;Microsoft.UI.Xaml.Controls.pri;Microsoft.ui.xaml.dll;Microsoft.UI.Xaml.Internal.dll;Microsoft.UI.Xaml.Phone.dll;Microsoft.ui.xaml.resources.19h1.dll;Microsoft.ui.xaml.resources.common.dll;Microsoft.Web.WebView2.Core.dll;Microsoft.Windows.ApplicationModel.Resources.dll;Microsoft.Windows.AppNotifications.Projection.dll;Microsoft.Windows.PushNotifications.Projection.dll;Microsoft.Windows.System.Projection.dll;Microsoft.WindowsAppRuntime.dll;Microsoft.WindowsAppRuntime.Insights.Resource.dll;Microsoft.WindowsAppRuntime.Release.Net.dll;MRM.dll;PushNotificationsLongRunningTask.ProxyStub.dll;WindowsAppRuntime.png;WindowsAppSdk.AppxDeploymentExtensions.Desktop.dll;WinUIEdit.dll;wuceffectsi.dll?>
 
-  <?define SettingsV2AssetsModulesFiles=ColorPicker.png;FancyZones.png;AlwaysOnTop.png;Awake.png;ImageResizer.png;KBM.png;MouseUtils.png;PowerAccent.png;PowerOCR.png;PowerLauncher.png;PowerPreview.png;PowerRename.png;PT.png;ScreenRuler.png;ShortcutGuide.png;VideoConference.png?>
+  <?define SettingsV2AssetsModulesFiles=ColorPicker.png;FancyZones.png;FileLocksmith.png;AlwaysOnTop.png;Awake.png;ImageResizer.png;KBM.png;MouseUtils.png;PowerAccent.png;PowerOCR.png;PowerLauncher.png;PowerPreview.png;PowerRename.png;PT.png;ScreenRuler.png;ShortcutGuide.png;VideoConference.png?>
 
-  <?define SettingsV2OOBEAssetsModulesFiles=ColorPicker.gif;AlwaysOnTop.png;Awake.png;FancyZones.gif;FileExplorer.png;ImageResizer.gif;KBM.gif;MouseUtils.gif;PowerAccent.gif;PowerOCR.gif;PowerRename.gif;Run.gif;ScreenRuler.gif;OOBEShortcutGuide.png;VideoConferenceMute.png;OOBEPTHero.png?>
+  <?define SettingsV2OOBEAssetsModulesFiles=ColorPicker.gif;AlwaysOnTop.png;Awake.png;FancyZones.gif;FileExplorer.png;FileLocksmith.gif;ImageResizer.gif;KBM.gif;MouseUtils.gif;PowerAccent.gif;PowerOCR.gif;PowerRename.gif;Run.gif;ScreenRuler.gif;OOBEShortcutGuide.png;VideoConferenceMute.png;OOBEPTHero.png?>
 
-  <?define SettingsV2OOBEAssetsFluentIconsFiles=ColorPicker.png;FancyZones.png;AlwaysOnTop.png;Awake.png;FileExplorerPreview.png;FindMyMouse.png;ImageResizer.png;KeyboardManager.png;MouseHighlighter.png;MouseCrosshairs.png;MouseUtils.png;PowerAccent.png;PowerOcr.png;PowerRename.png;PowerToys.png;PowerToysRun.png;ScreenRuler.png;Settings.png;ShortcutGuide.png;VideoConferenceMute.png?>
+  <?define SettingsV2OOBEAssetsFluentIconsFiles=ColorPicker.png;FancyZones.png;AlwaysOnTop.png;Awake.png;FileExplorerPreview.png;FindMyMouse.png;FileLocksmith.png;ImageResizer.png;KeyboardManager.png;MouseHighlighter.png;MouseCrosshairs.png;MouseUtils.png;PowerAccent.png;PowerOcr.png;PowerRename.png;PowerToys.png;PowerToysRun.png;ScreenRuler.png;Settings.png;ShortcutGuide.png;VideoConferenceMute.png?>
 
 	<?define SettingsV2MicrosoftUIXamlAssetsInstallFiles=NoiseAsset_256x256_PNG.png?>
 
@@ -120,6 +121,8 @@
   <?define ImageResizerSparsePackageAssets=LargeTile.png;SmallTile.png;SplashScreen.png;Square150x150Logo.png;Square44x44Logo.png;storelogo.png;Wide310x150Logo.png?>
 
   <?define MeasureToolFiles=CoreMessagingXP.dll;dcompi.dll;dwmcorei.dll;DwmSceneI.dll;DWriteCore.dll;marshal.dll;Microsoft.DirectManipulation.dll;Microsoft.InputStateManager.dll;Microsoft.InteractiveExperiences.Projection.dll;Microsoft.Internal.FrameworkUdk.dll;Microsoft.UI.Composition.OSSupport.dll;Microsoft.UI.Input.dll;Microsoft.UI.Windowing.Core.dll;Microsoft.UI.Xaml.Controls.dll;Microsoft.UI.Xaml.Controls.pri;Microsoft.ui.xaml.dll;Microsoft.UI.Xaml.Internal.dll;Microsoft.UI.Xaml.Phone.dll;Microsoft.ui.xaml.resources.19h1.dll;Microsoft.ui.xaml.resources.common.dll;Microsoft.Web.WebView2.Core.dll;Microsoft.Windows.ApplicationModel.Resources.dll;Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll;Microsoft.Windows.AppLifecycle.Projection.dll;Microsoft.Windows.AppNotifications.Projection.dll;Microsoft.Windows.PushNotifications.Projection.dll;Microsoft.Windows.SDK.NET.dll;Microsoft.Windows.System.Projection.dll;Microsoft.WindowsAppRuntime.Bootstrap.dll;Microsoft.WindowsAppRuntime.Bootstrap.Net.dll;Microsoft.WindowsAppRuntime.dll;Microsoft.WindowsAppRuntime.Insights.Resource.dll;Microsoft.WindowsAppRuntime.Release.Net.dll;Microsoft.WinUI.dll;MRM.dll;PowerToys.ManagedCommon.dll;PowerToys.Interop.dll;PowerToys.ManagedTelemetry.dll;PowerToys.MeasureToolCore.dll;PowerToys.MeasureToolUI.deps.json;PowerToys.MeasureToolUI.dll;PowerToys.MeasureToolUI.exe;PowerToys.MeasureToolUI.runtimeconfig.json;PushNotificationsLongRunningTask.ProxyStub.dll;resources.pri;System.CodeDom.dll;System.Management.dll;WindowsAppRuntime.png;WindowsAppSdk.AppxDeploymentExtensions.Desktop.dll;WinRT.Runtime.dll;WinUIEdit.dll;WinUIEx.dll;wuceffectsi.dll?>
+
+  <?define FileLocksmithFiles=PowerToys.FileLocksmith.exe;PowerToys.FileLocksmith.dll?>
 
 	<?define PowerRenameMicrosoftUIXamlAssetsInstallFiles=NoiseAsset_256x256_PNG.png?>
 
@@ -473,6 +476,10 @@
                 </Directory>
             </Directory>
 
+            <!-- FileLocksmith -->
+            <Directory Id="FileLocksmithInstallFolder" Name="$(var.FileLocksmithProjectName)">
+            </Directory>
+
             <!-- Launcher -->
             <Directory Id="LauncherInstallFolder" Name="launcher">
               <Directory Id="LauncherImagesFolder" Name="Images" />
@@ -678,6 +685,26 @@
         <!-- Update Key to use IE11 for dllhost.exe -->
         <RegistryKey Root="HKLM" Key="Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION">
           <RegistryValue Type="integer" Name="dllhost.exe" Value="11000" />
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+
+    <!-- File Locksmith -->
+    <DirectoryRef Id="FileLocksmithInstallFolder" FileSource="$(var.BinDir)modules\$(var.FileLocksmithProjectName)">
+      <?foreach File in $(var.FileLocksmithFiles)?>
+      <Component Id="Module_FileLocksmith_$(var.File)" Win64="yes">
+        <File Id="Module_FileLocksmith_File_$(var.File)" Source="$(var.BinDir)modules\$(var.FileLocksmithProjectName)\$(var.File)" />
+      </Component>
+      <?endforeach?>
+      <Component Id="Module_FileLocksmith_Registry" Win64="yes">
+        <RegistryKey Root="HKLM" Key="Software\Classes\CLSID\{A898EA9D-9155-4811-A2B9-B7767D07B84F}">
+          <RegistryValue Type="string" Value="FileLocksmith Shell Extension" />
+          <RegistryValue Type="string" Name="ContextMenuOptIn" Value="" />
+          <RegistryValue Type="string" Key="InprocServer32" Value="[FileLocksmithInstallFolder]PowerToys.FileLocksmithExt.dll" />
+          <RegistryValue Type="string" Key="InprocServer32" Name="ThreadingModel" Value="Apartment" />
+        </RegistryKey>
+        <RegistryKey Root="HKLM" Key="Software\Classes\AllFileSystemObjects\ShellEx\ContextMenuHandlers\FileLocksmithExt">
+          <RegistryValue Type="string" Value="{A898EA9D-9155-4811-A2B9-B7767D07B84F}"/>
         </RegistryKey>
       </Component>
     </DirectoryRef>
@@ -1118,6 +1145,7 @@
       <?endforeach?>
       <ComponentRef Id="ImageResizer_ImageResizerSparsePackageAssets" />
       <ComponentRef Id="Module_ImageResizer_Registry" />
+      <ComponentRef Id="Module_FileLocksmith_Registry" />
       <?foreach File in $(var.PowerPreviewFiles)?>
       <ComponentRef Id="Module_PowerPreview_$(var.File)" />
       <?endforeach?>
