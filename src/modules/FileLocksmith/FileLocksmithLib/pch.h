@@ -8,6 +8,12 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
-#include "framework.h"
+#define WIN32_LEAN_AND_MEAN // Exclude rarely-used stuff from Windows headers
+#include <Windows.h>
+#include <Shlwapi.h>
+
+#include <string>
+
+#include <ProjectTelemetry.h>
 
 #endif //PCH_H
