@@ -22,7 +22,7 @@ void Trace::EnableFileLocksmith(_In_ bool enabled) noexcept
 {
     TraceLoggingWrite(
         g_hProvider,
-        "ImageResizer_EnableFileLocksmith",
+        "FileLocksmith_EnableFileLocksmith",
         ProjectTelemetryPrivacyDataTag(ProjectTelemetryTag_ProductAndServicePerformance),
         TraceLoggingKeyword(PROJECT_KEYWORD_MEASURE),
         TraceLoggingBoolean(enabled, "Enabled"));
