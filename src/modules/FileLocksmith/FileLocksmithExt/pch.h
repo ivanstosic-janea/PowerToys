@@ -12,4 +12,13 @@
 // Windows Header Files
 #include <windows.h>
 
+#include <winrt/base.h>
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlfile.h>
+#include <atlstr.h>
+#include <ShlObj.h>
+
 #endif //PCH_H
