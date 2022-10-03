@@ -11,7 +11,7 @@ namespace FileLocksmithUI
 {
     public partial class App : Application, IDisposable
     {
-        // private ThemeManager _themeManager;
+        private ThemeManager _themeManager;
         private bool _isDisposed;
 
         static App()
@@ -25,7 +25,7 @@ namespace FileLocksmithUI
             var mainWindow = new MainWindow();
             mainWindow.Show();
 
-            // _themeManager = new ThemeManager(this);
+            _themeManager = new ThemeManager(this);
         }
 
         protected virtual void Dispose(bool disposing)
@@ -34,7 +34,7 @@ namespace FileLocksmithUI
             {
                 if (disposing)
                 {
-                    // _themeManager?.Dispose();
+                    _themeManager?.Dispose();
                 }
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
