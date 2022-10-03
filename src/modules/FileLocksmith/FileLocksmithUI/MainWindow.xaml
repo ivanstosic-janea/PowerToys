@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="MyButtonClick">Click Me</Button>
+    <StackPanel Orientation="Vertical">
+        <Grid>
+            <Button Margin="8,8,8,0" Click="OnRefreshClick" HorizontalAlignment="Right">Refresh</Button>
+        </Grid>
+
+        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel x:Name="stackPanel" Orientation="Vertical"/>
+        </ScrollViewer>
     </StackPanel>
 </Window>

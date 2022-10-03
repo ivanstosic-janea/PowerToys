@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Windows;
+using System.Windows.Controls;
 
 namespace FileLocksmithUI
 {
@@ -13,9 +14,8 @@ namespace FileLocksmithUI
             this.InitializeComponent();
         }
 
-        private void MyButtonClick(object sender, RoutedEventArgs e)
+        private void OnRefreshClick(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
         }
     }
 }
