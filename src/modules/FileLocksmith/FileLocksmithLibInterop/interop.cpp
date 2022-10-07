@@ -2,6 +2,8 @@
 
 #include "FileLocksmith.h"
 
+#include "../FileLocksmithExt/Constants.h"
+
 namespace FileLocksmith::Interop
 {
     public ref struct ProcessResult
@@ -99,8 +101,15 @@ namespace FileLocksmith::Interop
             return from_wstring_view(user_cpp);
         }
 
-        static array<System::String^>^ ReadPathsFromStdin()
+        static array<System::String^>^ ReadPathsFromFile()
         {
+            std::wstring path = from_system_string(interop::Constants::AppDataPath());
+            path += L"\\";
+            path += constants::nonlocalizable::PowerToyName;
+            path += L"\\";
+            path += constants::nonlocalizable::LastRunPath;
+            std::ifstream stream(path);
+
             std::vector<std::wstring> result_cpp;
             std::wstring line;
 
@@ -110,7 +119,7 @@ namespace FileLocksmith::Interop
             {
                 WCHAR ch;
                 // We have to read data like this
-                if (!std::cin.read(reinterpret_cast<char*>(&ch), 2))
+                if (!stream.read(reinterpret_cast<char*>(&ch), 2))
                 {
                     finished = true;
                 }

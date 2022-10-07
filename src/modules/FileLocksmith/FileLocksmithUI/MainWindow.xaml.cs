@@ -31,7 +31,7 @@ namespace FileLocksmithUI
 
         public MainWindow()
         {
-            paths = FileLocksmith.Interop.NativeMethods.ReadPathsFromStdin();
+            paths = FileLocksmith.Interop.NativeMethods.ReadPathsFromFile();
             InitializeComponent();
             StartFindingProcesses();
         }

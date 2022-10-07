@@ -251,13 +251,10 @@ HRESULT ExplorerCommand::LaunchUI(CMINVOKECOMMANDINFO* pici, ipc::Writer* writer
     exe_path += L'\\';
     exe_path += constants::nonlocalizable::FileNameUIExe;
 
-    HANDLE read_handle = writer->get_read_handle();
-
     STARTUPINFO startupInfo;
     ZeroMemory(&startupInfo, sizeof(STARTUPINFO));
     startupInfo.cb = sizeof(STARTUPINFO);
-    startupInfo.hStdInput = read_handle;
-    startupInfo.dwFlags = STARTF_USESHOWWINDOW | STARTF_USESTDHANDLES;
+    startupInfo.dwFlags = STARTF_USESHOWWINDOW;
 
     if (pici)
     {
