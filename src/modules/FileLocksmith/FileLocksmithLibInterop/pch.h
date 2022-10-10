@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include <winternl.h>
 #include <Psapi.h>
+#include <shellapi.h>
 
 // C++ standard library headers
 #include <stdexcept>

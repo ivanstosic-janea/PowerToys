@@ -29,11 +29,30 @@ namespace FileLocksmithUI
     {
         private string[] paths;
 
-        public MainWindow()
+        public MainWindow(bool elevated)
         {
             paths = FileLocksmith.Interop.NativeMethods.ReadPathsFromFile();
             InitializeComponent();
             StartFindingProcesses();
+            if (elevated)
+            {
+                restartAsAdminBtn.IsEnabled = false;
+            }
+
+            Closed += (o, a) => Environment.Exit(0);
+        }
+
+        private void OnElevateClick(object sender, RoutedEventArgs e)
+        {
+            if (FileLocksmith.Interop.NativeMethods.StartAsElevated(paths))
+            {
+                // TODO gentler exit
+                Environment.Exit(0);
+            }
+            else
+            {
+                // TODO report error?
+            }
         }
 
         private void OnRefreshClick(object sender, RoutedEventArgs e)

@@ -42,7 +42,8 @@
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
-            <Button Margin="8,8,8,0" Click="OnRefreshClick" HorizontalAlignment="Right">Refresh</Button>
+            <Button Name="restartAsAdminBtn" Margin="8,8,8,0" Click="OnElevateClick" HorizontalAlignment="Left" Content="{x:Bind p:Resources.RestartAsAdmin}"/>
+            <Button Margin="8,8,8,0" Click="OnRefreshClick" HorizontalAlignment="Right" Content="{x:Bind p:Resources.Refresh}" />
         </Grid>
         <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <StackPanel x:Name="stackPanel" Orientation="Vertical"/>
