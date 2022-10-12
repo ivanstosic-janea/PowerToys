@@ -1610,7 +1610,7 @@
     <!-- Localization languages shipped with WinAppSDK. We should ship these as well. -->
     <?define WinAppSDKLocLanguageList = af-ZA;ar-SA;az-Latn-AZ;bg-BG;bs-Latn-BA;ca-ES;cs-CZ;cy-GB;da-DK;de-DE;el-GR;en-GB;en-us;es-ES;es-MX;et-EE;eu-ES;fa-IR;fi-FI;fr-CA;fr-FR;gl-ES;he-IL;hi-IN;hr-HR;hu-HU;id-ID;is-IS;it-IT;ja-JP;ka-GE;kk-KZ;ko-KR;lt-LT;lv-LV;ms-MY;nb-NO;nl-NL;nn-NO;pl-PL;pt-BR;pt-PT;ro-RO;ru-RU;sk-SK;sl-SI;sq-AL;sr-Cyrl-RS;sr-Latn-RS;sv-SE;th-TH;tr-TR;uk-UA;vi-VN;zh-CN;zh-TW?>
   <Fragment>
-        <?foreach ParentDirectory in SettingsV2InstallFolder;PowerRenameInstallFolder;MeasureToolInstallFolder?>
+        <?foreach ParentDirectory in SettingsV2InstallFolder;PowerRenameInstallFolder;MeasureToolInstallFolder;FileLocksmithInstallFolder?>
         <DirectoryRef Id="$(var.ParentDirectory)">
             <?foreach Language in $(var.WinAppSDKLocLanguageList)?>
             <?if $(var.Language) = af-ZA?>
@@ -1929,6 +1929,13 @@
                 <File Id="MeasureTool_WinAppSDKLoc_$(var.IdSafeLanguage)_XamlMui_File" Source="$(var.BinDir)modules\$(var.MeasureToolProjectName)\$(var.Language)\Microsoft.ui.xaml.dll.mui" />
                 <File Id="MeasureTool_WinAppSDKLoc_$(var.IdSafeLanguage)_XamlPhoneMui_File" Source="$(var.BinDir)modules\$(var.MeasureToolProjectName)\$(var.Language)\Microsoft.UI.Xaml.Phone.dll.mui" />
             </Component>
+			<Component
+                Id="FileLocksmith_WinAppSDKLoc_$(var.IdSafeLanguage)_Component"
+                Directory="WinAppSDKLoc$(var.IdSafeLanguage)FileLocksmithInstallFolder"
+                Guid="$(var.CompGUIDPrefix)04">
+				<File Id="FileLocksmith_WinAppSDKLoc_$(var.IdSafeLanguage)_XamlMui_File" Source="$(var.BinDir)modules\$(var.FileLocksmithProjectName)\$(var.Language)\Microsoft.ui.xaml.dll.mui" />
+				<File Id="FileLocksmith_WinAppSDKLoc_$(var.IdSafeLanguage)_XamlPhoneMui_File" Source="$(var.BinDir)modules\$(var.FileLocksmithProjectName)\$(var.Language)\Microsoft.UI.Xaml.Phone.dll.mui" />
+			</Component>
             <?undef IdSafeLanguage?>
             <?undef CompGUIDPrefix?>
             <?endforeach?>
