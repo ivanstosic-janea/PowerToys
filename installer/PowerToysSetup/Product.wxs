@@ -869,6 +869,27 @@
       <?endforeach?>
     </DirectoryRef>
 
+	<!-- FileLocksmith -->
+	<DirectoryRef Id="FileLocksmithInstallFolder" FileSource="$(var.BinDir)modules\$(var.FileLocksmithProjectName)">
+		<?foreach File in $(var.FileLocksmithFiles)?>
+		<Component Id="FileLocksmith_$(var.File)" Win64="yes">
+			<File Source="$(var.BinDir)modules\$(var.FileLocksmithProjectName)\$(var.File)" />
+		</Component>
+		<?endforeach?>
+		<!-- !Warning! Make sure to change Component Guid if you update something here -->
+		<Component Id="Module_FileLocksmith" Guid="267D6F91-2ED9-478D-8AB2-331EBCD0FAAF" Win64="yes">
+			<RegistryKey Root="HKLM" Key="Software\Classes\CLSID\{84D68575-E186-46AD-B0CB-BAEB45EE29C0}">
+				<RegistryValue Type="string" Value="File Locksmith Shell Extension" />
+				<RegistryValue Type="string" Name="ContextMenuOptIn" Value="" />
+				<RegistryValue Type="string" Key="InprocServer32" Value="[FileLocksmithInstallFolder]PowerToys.FileLocksmithExt.dll" />
+				<RegistryValue Type="string" Key="InprocServer32" Name="ThreadingModel" Value="Apartment" />
+			</RegistryKey>
+			<RegistryKey Root="HKLM" Key="Software\Classes\AllFileSystemObjects\ShellEx\ContextMenuHandlers\FileLocksmithExt">
+				<RegistryValue Type="string" Value="{84D68575-E186-46AD-B0CB-BAEB45EE29C0}"/>
+			</RegistryKey>
+		</Component>
+	</DirectoryRef>
+
     <!-- PowerRename -->
     <DirectoryRef Id="PowerRenameInstallFolder" FileSource="$(var.BinDir)modules\$(var.PowerRenameProjectName)">
       <?foreach File in $(var.PowerRenameFiles)?>
@@ -886,27 +907,6 @@
         </RegistryKey>
         <RegistryKey Root="HKLM" Key="Software\Classes\AllFileSystemObjects\ShellEx\ContextMenuHandlers\PowerRenameExt">
           <RegistryValue Type="string" Value="{0440049F-D1DC-4E46-B27B-98393D79486B}"/>
-        </RegistryKey>
-      </Component>
-    </DirectoryRef>
-
-    <!-- FileLocksmith -->
-    <DirectoryRef Id="FileLocksmithInstallFolder" FileSource="$(var.BinDir)modules\$(var.FileLocksmithProjectName)">
-      <?foreach File in $(var.FileLocksmithFiles)?>
-      <Component Id="FileLocksmith_$(var.File)" Win64="yes">
-        <File Source="$(var.BinDir)modules\$(var.FileLocksmithProjectName)\$(var.File)" />
-      </Component>
-      <?endforeach?>
-      <!-- !Warning! Make sure to change Component Guid if you update something here -->
-      <Component Id="Module_FileLocksmith" Guid="267D6F91-2ED9-478D-8AB2-331EBCD0FAAF" Win64="yes">
-        <RegistryKey Root="HKLM" Key="Software\Classes\CLSID\{84D68575-E186-46AD-B0CB-BAEB45EE29C0}">
-          <RegistryValue Type="string" Value="File Locksmith Shell Extension" />
-          <RegistryValue Type="string" Name="ContextMenuOptIn" Value="" />
-          <RegistryValue Type="string" Key="InprocServer32" Value="[FileLocksmithInstallFolder]PowerToys.FileLocksmithExt.dll" />
-          <RegistryValue Type="string" Key="InprocServer32" Name="ThreadingModel" Value="Apartment" />
-        </RegistryKey>
-        <RegistryKey Root="HKLM" Key="Software\Classes\AllFileSystemObjects\ShellEx\ContextMenuHandlers\FileLocksmithExt">
-          <RegistryValue Type="string" Value="{84D68575-E186-46AD-B0CB-BAEB45EE29C0}"/>
         </RegistryKey>
       </Component>
     </DirectoryRef>
