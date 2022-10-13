@@ -15,7 +15,9 @@
     IsTitleBarVisible="True"
     Title="{x:Bind p:Resources.FileLocksmithTitle}"
     Width="758"
+    MinWidth="640"
     Height="480"
+    MinHeight="320"
     mc:Ignorable="d">
     <!--
     

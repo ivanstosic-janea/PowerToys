@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Threading;
+using ManagedCommon;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
@@ -31,6 +32,9 @@ namespace FileLocksmithUI
 
         public MainWindow(bool elevated)
         {
+            var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            ThemeHelpers.SetImmersiveDarkMode(hWnd, ThemeHelpers.GetAppTheme() == AppTheme.Dark);
+
             paths = FileLocksmith.Interop.NativeMethods.ReadPathsFromFile();
             InitializeComponent();
             StartFindingProcesses();
