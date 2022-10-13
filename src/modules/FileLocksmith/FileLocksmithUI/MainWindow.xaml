@@ -37,7 +37,7 @@
     
     -->
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition/>
