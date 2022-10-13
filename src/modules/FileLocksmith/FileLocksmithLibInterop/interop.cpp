@@ -116,6 +116,12 @@ namespace FileLocksmith::Interop
             return from_wstring_view(user_cpp);
         }
 
+        static System::String^ PidToFullPath(System::UInt32 pid)
+        {
+            auto path_cpp = pid_to_full_path(pid);
+            return from_wstring_view(path_cpp);
+        }
+
         static array<System::String^>^ ReadPathsFromFile()
         {
             std::ifstream stream(paths_file());

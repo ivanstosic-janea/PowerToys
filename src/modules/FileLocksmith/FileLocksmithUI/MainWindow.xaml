@@ -46,7 +46,7 @@
             <Button Margin="8,8,8,0" Click="OnRefreshClick" HorizontalAlignment="Right" Content="{x:Bind p:Resources.Refresh}" />
         </Grid>
         <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <StackPanel x:Name="stackPanel" Orientation="Vertical"/>
+            <StackPanel Margin="0,8,0,0" x:Name="stackPanel" Orientation="Vertical"/>
         </ScrollViewer>
     </Grid>
     
